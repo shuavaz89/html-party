@@ -96,6 +96,7 @@ var initSetup = function () {
     buttonEle.style['margin-right'] = "8px";
     buttonEle.style['background-color'] = "purple";
     buttonEle.style['color'] = "white";
+    buttonEle.style['cursor'] = "pointer";
     buttonEle.style['padding'] = "8px";
     buttonEle.style['border'] = "1px solid violet";
     buttonEle.style['border-radius'] = "8px";
@@ -113,6 +114,7 @@ var initSetup = function () {
     const debugLabelEle = document.createElement("label");
     debugLabelEle.setAttribute("for", "party-debug");
     debugLabelEle.innerText = "Show Freq";
+    debugLabelEle.style['font-weight'] = "bold";
     partyTimeContainer.appendChild(debugLabelEle);
 
     const debugEle = document.createElement("input");

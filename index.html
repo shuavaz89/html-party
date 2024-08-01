@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Party Playground!</title>
+        <title>Party Playground! v1.0.0 (Experimental)</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <style>
             .roboto-regular {
             font-family: "Roboto", sans-serif;
-            font-weight: 400;
+            font-weight: 600;
             font-style: normal;
             }
 
@@ -17,44 +17,124 @@
             }
             .container {
                 display: flex;
+                flex-direction: column;
+                gap: 16px;
             }
-            .container div {
-                flex: 1 0 auto;
+            .row {
+                display: flex;
+                gap: 16px;
+            }
+
+            .row > div {
+                flex: 1 0 50%;
+            }
+
+            code {
+                display: block;
+                font-family: monospace;
+                padding: 16px;
+                border-radius: 8px;
+                color: white;
+                background: rgb(40, 37, 44);
             }
         </style>
     </head>
     <body class="party-time-bkgColor party-time-freq-mid roboto-regular">
-        <h1 style="margin-top: 24px;">Party Playground - Play Music with Style (CSS)</h1>
-        <p>Upload an audio file to play</p>
+        <h1 style="margin-top: 24px;">
+            Party Playground - Play Music with Style (CSS)
+            <br />
+            v1.0.0 (Experimental)
+        </h1>
+        <p>Upload an audio file to play. <a href="https://github.com/shuavaz89/music-with-style">View Source Code</a></p>
         <div class="container">
             <div>
                 <h2>Options</h2>
+                <p>Have elements have fun!</p>
                 
-                <p class="party-time-color">Color VFX</p>
+                <div class="row">
+                    <div>
+                    <code>
+                        &lt;p class="party-time-color"&gt;Color VFX&lt;/p&gt;
+                        <br />
+                        <br />
+                        &lt;p class="party-time-textShadow"&gt;Text Shadow VFX&lt;/p&gt;
+                        <br />
+                        <br />
+                        &lt;p class="party-time-fontSize"&gt;Font Size VFX&lt;/p&gt;
+                        <br />
+                        <br />
+                        &lt;p class="party-time-colorVolume"&gt;Color Volume VFX&lt;/p&gt;
+                        <br />
+                        <br />
+                        &lt;p class="party-time-fontSize party-time-colorVolume"&gt;Font Size & Color Volume VFX&lt;/p&gt;
+                        <br />
+                        <br />
+                        &lt;p class="party-time-fontSize party-time-textShadow"&gt;Text Shadow & Font Size VFX&lt;/p&gt;
+                        <br />
+                        <br />
+                        &lt;body class="party-time-bkgColor"&gt;
+                            <br />
+                            &nbsp;&nbsp;...
+                            <br />
+                        &lt;/body&gt;
+                    </code>
+                </div>
 
-                <p class="party-time-textShadow">Text Shadow VFX</p>
-
-                <p class="party-time-fontSize">Font Size VFX</p>
-
-                <p class="party-time-colorVolume">Color Volume VFX</p>
-
-                <p class="party-time-fontSize party-time-colorVolume">Font Size & Color Volume VFX</p>
-
-                <p class="party-time-fontSize party-time-textShadow">Text Shadow & Font Size VFX</p>
+                    <div>
+                        <p class="party-time-color">Color VFX</p>
+                        <p class="party-time-textShadow">Text Shadow VFX</p>
+                        <p class="party-time-fontSize">Font Size VFX</p>
+                        <p class="party-time-colorVolume">Color Volume VFX</p>
+                        <p class="party-time-fontSize party-time-colorVolume">Font Size & Color Volume VFX</p>
+                        <p class="party-time-fontSize party-time-textShadow">Text Shadow & Font Size VFX</p>
+                    </div>
+                </div>
             </div>
             <div>
                 <h2>Frequencies</h2>
-                <p class="party-time-fontSize party-time-colorVolume party-time-freq-low">Low Freq</p>
+                <p>Have elements have fun withing a range in the frequency!</p>
 
-                <p class="party-time-fontSize party-time-colorVolume party-time-freq-mid">Mid Freq</p>
+                <div class="row">
+                    <div>
+                        <code>
+                            &lt;p class="party-time-fontSize party-time-colorVolume party-time-freq-low"&gt;Low Frequencies&lt;/p&gt;
+                            <br />
+                            <br />
+                            &lt;p class="party-time-fontSize party-time-colorVolume party-time-freq-mid"&gt;Mid Frequencies&lt;/p&gt;
+                            <br />
+                            <br />
+                            &lt;p class="party-time-fontSize party-time-colorVolume party-time-freq-high"&gt;High Frequencies&lt;/p&gt;
+                        </code>
+                    </div>
 
-                <p class="party-time-fontSize party-time-colorVolume party-time-freq-high">High Freq</p>
+                    <div>
+                        <p class="party-time-fontSize party-time-colorVolume party-time-freq-low">Low Freq</p>
+
+                        <p class="party-time-fontSize party-time-colorVolume party-time-freq-mid">Mid Freq</p>
+
+                        <p class="party-time-fontSize party-time-colorVolume party-time-freq-high">High Freq</p>
+                    </div>
+                
+                </div>
             </div>
             <div>
                 <h2>Party Time Baby!</h2>
-                <div class="party-time-baby">
-                    <p>Woohoo!</p>
-                    <p>Yahoo!</p>
+                <p>Have all elements within a container have fun!</p>
+
+                <div class="row">
+                    <div>
+                        <code>
+                            &lt;div class="party-time-baby"&gt;
+                                <br />
+                                &nbsp;&nbsp;...
+                                <br />
+                            &lt;/div&gt;
+                        </code>
+                    </div>
+                    <div class="party-time-baby">
+                        <p>Woohoo!</p>
+                        <p>Yahoo!</p>
+                    </div>
                 </div>
             </div>
         </div>
