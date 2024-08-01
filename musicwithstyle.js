@@ -66,8 +66,12 @@ function middleValue(a, b) {
     return Math.round((a+b)/2);
 }
 
+const _cacheWidth = [];
+const _cacheHeight = [];
 const _cache = [];
 const _cache2 = [];
+const _cache3 = [];
+const _cache4 = [];
 let debug_mode = false;
 let is_playing = false;
 let clear_styles = false;
@@ -251,13 +255,23 @@ var vfx = function (index, ele, bufferLength, dataArray) {
 
     if (ele.classList.contains("party-time-textShadow")) {
         const freq = Math.floor(freqRange / 100);
-        const _changed = _cache[index] !== freq;
+        const _changed = _cache3[index] !== freq;
         if (_changed) {
-            _cache[index] = freq;
+            _cache3[index] = freq;
             const textShadowColor = FUN_COLORS[getRandomInt(1, FUN_COLORS.length - 1)];
             ele.style['color'] = "#FFFFFF";
             ele.style['text-shadow'] = "0 0 10px #fff, 0 0 20px #fff, 0 0 30px " + textShadowColor + ", 0 0 40px " + textShadowColor + ", 0 0 50px " + textShadowColor +", 0 0 60px " + textShadowColor + ", 0 0 70px " + textShadowColor;
 
+        }
+    }
+
+    if (ele.classList.contains("party-time-boxShadow")) {
+        const freq = Math.floor(freqRange / 100);
+        const _changed = _cache4[index] !== freq;
+        if (_changed) {
+            _cache4[index] = freq;
+            const boxShadowColor = FUN_COLORS[getRandomInt(1, FUN_COLORS.length - 1)];
+            ele.style['box-shadow'] = "0 0 10px #fff, 0 0 20px #fff, 0 0 30px " + boxShadowColor + ", 0 0 40px " + boxShadowColor + ", 0 0 50px " + boxShadowColor +", 0 0 60px " + boxShadowColor + ", 0 0 70px " + boxShadowColor;
         }
     }
 
@@ -280,36 +294,33 @@ var vfx = function (index, ele, bufferLength, dataArray) {
     }
 
     if (ele.classList.contains("party-time-width")) {
-        var width = freqRange / 10;
-        ele.style["width"] = (width <= 0 ? 10 : width) + "px";
+        if (!_cacheWidth[index]) _cacheWidth[index] = ele.offsetWidth;
+        ele.style["width"] = _cacheWidth[index] + (freqRange / 2) + "px";
     }
 
     if (ele.classList.contains("party-time-height")) {
-        var height = freqRange / 10;
-        ele.style["height"] = (height <= 0 ? 10 : height) + "px";
+        if (!_cacheHeight[index]) _cacheHeight[index] = ele.offsetHeight;
+        ele.style["height"] = _cacheHeight[index] + (freqRange / 2) + "px";
     }
 
     if (ele.classList.contains("party-time-posTop")) {
-        var top = freqRange / 10;
         ele.style["position"] = "relative";
-        ele.style["top"] = (top <= 0 ? 10 : top) + "px";
+        ele.style["top"] = (freqRange / 10) + "px";
     }
 
     if (ele.classList.contains("party-time-posRight")) {
-        var right = freqRange / 10;
         ele.style["position"] = "relative";
-        ele.style["right"] = (right <= 0 ? 10 : right) + "px";
+        ele.style["right"] = (freqRange / 10) + "px";
     }
+
     if (ele.classList.contains("party-time-posBottom")) {
-        var bottom = freqRange / 10;
         ele.style["position"] = "relative";
-        ele.style["bottom"] = (bottom <= 0 ? 10 : bottom) + "px";
+        ele.style["bottom"] = (freqRange / 10) + "px";
     }
 
     if (ele.classList.contains("party-time-posLeft")) {
-        var left = freqRange / 10;
         ele.style["position"] = "relative";
-        ele.style["left"] = (left <= 0 ? 10 : left) + "px";
+        ele.style["left"] = (freqRange / 10) + "px";
     }
 
     if (debug_mode) {

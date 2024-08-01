@@ -35,7 +35,29 @@
                 padding: 16px;
                 border-radius: 8px;
                 color: white;
+                width: 100%;
+                max-width: 250px;
                 background: rgb(40, 37, 44);
+            }
+
+            .box {
+                width: 100px;
+                height: 100px;
+                background: black;
+            }
+
+            .grid {
+                gap: 16px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .grid > .item {
+                display: flex;
+                gap: 8px;
+                flex-direction: column;
+                align-items: center;
+                justify-self: flex-start;
+                flex: 1 0 20%;
             }
         </style>
     </head>
@@ -46,80 +68,232 @@
             v1.0.0 (Experimental)
         </h1>
         <p>Upload an audio file to play. <a href="https://github.com/shuavaz89/music-with-style">View Source Code</a></p>
-        <div class="container">
-            <div>
-                <h2>Options</h2>
-                <p>Have elements have fun!</p>
-                
-                <div class="row">
-                    <div>
+        <div class="grid">
+            <div class="item">
+                <div class="example">
+                    <p class="party-time-color">Color VFX</p>
+                </div>
+                <div>
                     <code>
                         &lt;p class="party-time-color"&gt;Color VFX&lt;/p&gt;
-                        <br />
-                        <br />
+                    </code>
+                </div>
+            </div>
+            <div class="item">
+                <div class="example">
+                    <p class="party-time-textShadow">Text Shadow VFX</p>
+                </div>
+                <div>
+                    <code>
                         &lt;p class="party-time-textShadow"&gt;Text Shadow VFX&lt;/p&gt;
-                        <br />
-                        <br />
+                    </code>
+                </div>
+            </div>
+            <div class="item">
+                <div class="example">
+                    <p class="party-time-fontSize">Font Size VFX</p>
+                </div>
+                <div>
+                    <code>
                         &lt;p class="party-time-fontSize"&gt;Font Size VFX&lt;/p&gt;
+                    </code>
+                </div>
+            </div>
+            <div class="item">
+                <div class="example">
+                    <p class="party-time-colorVolume">
+                        Color Volume VFX
                         <br />
-                        <br />
+                        <small>Green - Low, Yellow - Mid, Reg - High</small>
+                    </p>
+                </div>
+                <div>
+                    <code>
                         &lt;p class="party-time-colorVolume"&gt;Color Volume VFX&lt;/p&gt;
-                        <br />
-                        <br />
+                    </code>
+                </div>
+            </div>
+            <div class="item">
+                <div class="example">
+                    <p class="party-time-fontSize party-time-colorVolume">Font Size & Color Volume VFX</p>
+                </div>
+                <div>
+                    <code>
                         &lt;p class="party-time-fontSize party-time-colorVolume"&gt;Font Size & Color Volume VFX&lt;/p&gt;
-                        <br />
-                        <br />
-                        &lt;p class="party-time-fontSize party-time-textShadow"&gt;Text Shadow & Font Size VFX&lt;/p&gt;
-                        <br />
-                        <br />
-                        &lt;body class="party-time-bkgColor"&gt;
+                    </code>
+                </div>
+            </div>
+            <div class="item">
+                <div class="example">
+                    <p class="party-time-fontSize party-time-textShadow">Font Size & Text Shadow VFX</p>
+                </div>
+                <div>
+                    <code>
+                        &lt;p class="party-time-fontSize party-time-textShadow"&gt;Font Size & Text Shadow VFX&lt;/p&gt;
+                    </code>
+                </div>
+            </div>
+            <div class="item">
+                <div class="example">
+                    <p class="party-time-fontSize party-time-colorVolume party-time-freq-low">Low Frequencies</p>
+                </div>
+                <div>
+                    <code>
+                        &lt;p class="party-time-fontSize party-time-colorVolume party-time-freq-low"&gt;Low Frequencies&lt;/p&gt;
+                    </code>
+                </div>
+            </div>
+            <div class="item">
+                <div class="example">
+                    <p class="party-time-fontSize party-time-colorVolume party-time-freq-mid">Mid Frequencies</p>
+                </div>
+                <div>
+                    <code>
+                        &lt;p class="party-time-fontSize party-time-colorVolume party-time-freq-mid"&gt;Mid Frequencies&lt;/p&gt;
+                    </code>
+                </div>
+            </div>
+            <div class="item">
+                <div class="example">
+                    <p class="party-time-fontSize party-time-colorVolume party-time-freq-high">High Frequencies</p>
+                </div>
+                <div>
+                    <code>
+                        &lt;p class="party-time-fontSize party-time-colorVolume party-time-freq-high"&gt;High Frequencies&lt;/p&gt;
+                    </code>
+                </div>
+            </div>
+            <div class="item">
+                <div class="example">
+                    <div class="box party-time-bkgColor"></div>
+                </div>
+                <div>
+                    <code>
+                        &lt;div class="party-time-bkgColor"&gt;
                             <br />
                             &nbsp;&nbsp;...
                             <br />
-                        &lt;/body&gt;
+                        &lt;/div&gt;
                     </code>
                 </div>
-
-                    <div>
-                        <p class="party-time-color">Color VFX</p>
-                        <p class="party-time-textShadow">Text Shadow VFX</p>
-                        <p class="party-time-fontSize">Font Size VFX</p>
-                        <p class="party-time-colorVolume">Color Volume VFX</p>
-                        <p class="party-time-fontSize party-time-colorVolume">Font Size & Color Volume VFX</p>
-                        <p class="party-time-fontSize party-time-textShadow">Text Shadow & Font Size VFX</p>
-                    </div>
+            </div>
+            <div class="item">
+                <div class="example">
+                    <div class="box party-time-boxShadow"></div>
+                </div>
+                <div>
+                    <code>
+                        &lt;div class="party-time-boxShadow"&gt;
+                            <br />
+                            &nbsp;&nbsp;...
+                            <br />
+                        &lt;/div&gt;
+                    </code>
                 </div>
             </div>
-            <div>
-                <h2>Frequencies</h2>
-                <p>Have elements have fun withing a range in the frequency!</p>
-
-                <div class="row">
-                    <div>
-                        <code>
-                            &lt;p class="party-time-fontSize party-time-colorVolume party-time-freq-low"&gt;Low Frequencies&lt;/p&gt;
+            <div class="item">
+                <div class="example">
+                    <div class="box party-time-width"></div>
+                </div>
+                <div>
+                    <code>
+                        &lt;div class="party-time-width"&gt;
                             <br />
+                            &nbsp;&nbsp;...
                             <br />
-                            &lt;p class="party-time-fontSize party-time-colorVolume party-time-freq-mid"&gt;Mid Frequencies&lt;/p&gt;
-                            <br />
-                            <br />
-                            &lt;p class="party-time-fontSize party-time-colorVolume party-time-freq-high"&gt;High Frequencies&lt;/p&gt;
-                        </code>
-                    </div>
-
-                    <div>
-                        <p class="party-time-fontSize party-time-colorVolume party-time-freq-low">Low Freq</p>
-
-                        <p class="party-time-fontSize party-time-colorVolume party-time-freq-mid">Mid Freq</p>
-
-                        <p class="party-time-fontSize party-time-colorVolume party-time-freq-high">High Freq</p>
-                    </div>
-                
+                        &lt;/div&gt;
+                    </code>
                 </div>
             </div>
+            <div class="item">
+                <div class="example">
+                    <div class="box party-time-height"></div>
+                </div>
+                <div>
+                    <code>
+                        &lt;div class="party-time-height"&gt;
+                            <br />
+                            &nbsp;&nbsp;...
+                            <br />
+                        &lt;/div&gt;
+                    </code>
+                </div>
+            </div>
+            <div class="item">
+                <div class="example">
+                    <div class="box party-time-width party-time-height"></div>
+                </div>
+                <div>
+                    <code>
+                        &lt;div class="party-time-width party-time-height"&gt;
+                            <br />
+                            &nbsp;&nbsp;...
+                            <br />
+                        &lt;/div&gt;
+                    </code>
+                </div>
+            </div>
+            <div class="item">
+                <div class="example">
+                    <div class="box party-time-posTop"></div>
+                </div>
+                <div>
+                    <code>
+                        &lt;div class="party-time-posTop"&gt;
+                            <br />
+                            &nbsp;&nbsp;...
+                            <br />
+                        &lt;/div&gt;
+                    </code>
+                </div>
+            </div>
+            <div class="item">
+                <div class="example">
+                    <div class="box party-time-posRight"></div>
+                </div>
+                <div>
+                    <code>
+                        &lt;div class="party-time-posRight"&gt;
+                            <br />
+                            &nbsp;&nbsp;...
+                            <br />
+                        &lt;/div&gt;
+                    </code>
+                </div>
+            </div>
+            <div class="item">
+                <div class="example">
+                    <div class="box party-time-posBottom"></div>
+                </div>
+                <div>
+                    <code>
+                        &lt;div class="party-time-posBottom"&gt;
+                            <br />
+                            &nbsp;&nbsp;...
+                            <br />
+                        &lt;/div&gt;
+                    </code>
+                </div>
+            </div>
+            <div class="item">
+                <div class="example">
+                    <div class="box party-time-posLeft"></div>
+                </div>
+                <div>
+                    <code>
+                        &lt;div class="party-time-posLeft"&gt;
+                            <br />
+                            &nbsp;&nbsp;...
+                            <br />
+                        &lt;/div&gt;
+                    </code>
+                </div>
+            </div>
+        </div>
+        <div class="container">
             <div>
                 <h2>Party Time Baby!</h2>
-                <p>Have all elements within a container have fun!</p>
+                <p>Have all elements within a container randomly have fun!</p>
 
                 <div class="row">
                     <div>
@@ -134,6 +308,7 @@
                     <div class="party-time-baby">
                         <p>Woohoo!</p>
                         <p>Yahoo!</p>
+                        <p>Fun!!</p>
                     </div>
                 </div>
             </div>
