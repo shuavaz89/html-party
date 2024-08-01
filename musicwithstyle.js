@@ -143,10 +143,6 @@ var startParty = function () {
 
     if (audio1) audio1.pause();
 
-    // debug
-    audio1 = new Audio();
-    audio1.loop = true;
-
     if (!audio1.src) return;
 
     if (is_playing) {
