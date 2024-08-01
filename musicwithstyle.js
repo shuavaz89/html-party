@@ -1,7 +1,3 @@
-/**
- * MUSIC WITH STYLE!!!
- */
-
 const FUN_COLORS = [
     "#ec1254",
     "#f27c14",
@@ -75,6 +71,8 @@ const _cache2 = [];
 let debug_mode = false;
 let is_playing = false;
 let clear_styles = false;
+let audioSource = null;
+let analyser = null;
 let animate;
 let audio1;
 
@@ -132,6 +130,13 @@ var handleAudioFile = function(event) {
     audio1 = new Audio();
     audio1.src = URL.createObjectURL(files[0]);
     audio1.loop = true;
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    audioSource = audioCtx.createMediaElementSource(audio1);
+    analyser = audioCtx.createAnalyser();
+    audioSource.connect(analyser);
+    analyser.connect(audioCtx.destination);
+
+    analyser.fftSize = 128;
 }
 
 var handleDebug = function (event) {
@@ -157,19 +162,9 @@ var startParty = function () {
 
     patyTimeButton.innerText = "Stop The Party... 😔"
 
-    is_playing = true;
-
-    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    let audioSource = null;
-    let analyser = null;
+    is_playing = true;    
 
     audio1.play();
-    audioSource = audioCtx.createMediaElementSource(audio1);
-    analyser = audioCtx.createAnalyser();
-    audioSource.connect(analyser);
-    analyser.connect(audioCtx.destination);
-
-    analyser.fftSize = 128;
     const bufferLength = analyser.frequencyBinCount;
     const dataArray = new Uint8Array(bufferLength);
     
