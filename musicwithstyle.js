@@ -250,7 +250,7 @@ var vfx = function (index, ele, bufferLength, dataArray) {
         const _changed = _cache[index] !== freq;
         if (_changed) {
             _cache[index] = freq;
-            ele.style["color"] = FUN_COLORS[getRandomInt(1, FUN_COLORS.length - 1)];
+            ele.style["color"] = FUN_COLORS[getRandomInt(1, FUN_COLORS.length - 1)] + "!important";
         }
     }
 
@@ -261,7 +261,7 @@ var vfx = function (index, ele, bufferLength, dataArray) {
             _cache3[index] = freq;
             const textShadowColor = FUN_COLORS[getRandomInt(1, FUN_COLORS.length - 1)];
             ele.style['color'] = "#FFFFFF";
-            ele.style['text-shadow'] = "0 0 10px #fff, 0 0 20px #fff, 0 0 30px " + textShadowColor + ", 0 0 40px " + textShadowColor + ", 0 0 50px " + textShadowColor +", 0 0 60px " + textShadowColor + ", 0 0 70px " + textShadowColor;
+            ele.style['text-shadow'] = "0 0 10px #fff, 0 0 20px #fff, 0 0 30px " + textShadowColor + ", 0 0 40px " + textShadowColor + ", 0 0 50px " + textShadowColor +", 0 0 60px " + textShadowColor + ", 0 0 70px " + textShadowColor + "!important";
 
         }
     }
@@ -272,7 +272,7 @@ var vfx = function (index, ele, bufferLength, dataArray) {
         if (_changed) {
             _cache4[index] = freq;
             const boxShadowColor = FUN_COLORS[getRandomInt(1, FUN_COLORS.length - 1)];
-            ele.style['box-shadow'] = "0 0 10px #fff, 0 0 20px #fff, 0 0 30px " + boxShadowColor + ", 0 0 40px " + boxShadowColor + ", 0 0 50px " + boxShadowColor +", 0 0 60px " + boxShadowColor + ", 0 0 70px " + boxShadowColor;
+            ele.style['box-shadow'] = "0 0 10px #fff, 0 0 20px #fff, 0 0 30px " + boxShadowColor + ", 0 0 40px " + boxShadowColor + ", 0 0 50px " + boxShadowColor +", 0 0 60px " + boxShadowColor + ", 0 0 70px " + boxShadowColor + "!important";
         }
     }
 
@@ -281,47 +281,47 @@ var vfx = function (index, ele, bufferLength, dataArray) {
         const _changed2 = _cache2[index] !== freq2;
         if (_changed2) {
             _cache2[index] = freq2;
-            ele.style["background-color"] = FUN_COLORS[getRandomInt(1, FUN_COLORS.length - 1)];
+            ele.style["background-color"] = FUN_COLORS[getRandomInt(1, FUN_COLORS.length - 1)] + "!important";
         }
     }
 
     if (ele.classList.contains("party-time-colorVolume")) {
-        ele.style["color"] = COLOR_FREQ[Math.floor(freqRange / 100)];
+        ele.style["color"] = COLOR_FREQ[Math.floor(freqRange / 100)] + "!important";
     }
     
     if (ele.classList.contains("party-time-fontSize")) {
         var fontSize = freqRange / 10;
-        ele.style["font-size"] = (fontSize <= 0 ? 10 : fontSize) + "px";
+        ele.style["font-size"] = (fontSize <= 0 ? 10 : fontSize) + "px!important";
     }
 
     if (ele.classList.contains("party-time-width")) {
         if (!_cacheWidth[index]) _cacheWidth[index] = ele.offsetWidth;
-        ele.style["width"] = _cacheWidth[index] + (freqRange / 2) + "px";
+        ele.style["width"] = _cacheWidth[index] + (freqRange / 2) + "px!important";
     }
 
     if (ele.classList.contains("party-time-height")) {
         if (!_cacheHeight[index]) _cacheHeight[index] = ele.offsetHeight;
-        ele.style["height"] = _cacheHeight[index] + (freqRange / 2) + "px";
+        ele.style["height"] = _cacheHeight[index] + (freqRange / 2) + "px!important";
     }
 
     if (ele.classList.contains("party-time-posTop")) {
         ele.style["position"] = "relative";
-        ele.style["top"] = (freqRange / 10) + "px";
+        ele.style["top"] = (freqRange / 10) + "px!important";
     }
 
     if (ele.classList.contains("party-time-posRight")) {
         ele.style["position"] = "relative";
-        ele.style["right"] = (freqRange / 10) + "px";
+        ele.style["right"] = (freqRange / 10) + "px!important";
     }
 
     if (ele.classList.contains("party-time-posBottom")) {
-        ele.style["position"] = "relative";
-        ele.style["bottom"] = (freqRange / 10) + "px";
+        ele.style["position"] = "relative!important";
+        ele.style["bottom"] = (freqRange / 10) + "px!important";
     }
 
     if (ele.classList.contains("party-time-posLeft")) {
         ele.style["position"] = "relative";
-        ele.style["left"] = (freqRange / 10) + "px";
+        ele.style["left"] = (freqRange / 10) + "px!important";
     }
 
     if (debug_mode) {
