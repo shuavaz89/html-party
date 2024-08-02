@@ -4,6 +4,8 @@ Tired of your old boring web page? Why not add some music with styling!
 
 [DEMO](https://shuavaz89.github.io/music-with-style/)
 
+[Watch the Video](https://www.youtube.com/watch?v=L_qJz20F)
+
 ## How it works
 
 Music With STYLE excecutes CSS styling properties on targetted elements and they will respond to the audio frequencies of a song. 
