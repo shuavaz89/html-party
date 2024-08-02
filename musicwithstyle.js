@@ -18,7 +18,7 @@ const COLOR_FREQ = [
 const PARTY_TIME_CLASSES = [
     "party-time-color",
     "party-time-textShadow",
-    "party-time-b oxShadow",
+    "party-time-boxShadow",
     "party-time-bkgColor",
     "party-time-height",
     "party-time-width",

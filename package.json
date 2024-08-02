@@ -4,8 +4,12 @@
   "description": "Add music with CSS styling to your webpage.",
   "main": "src/musicwithstyle.js",
   "scripts": {
+    "start": "http-serve ./ -a localhost -p 8000 -c-1",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Joshua Vazquez",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "http-serve": "^1.0.1"
+  }
 }
