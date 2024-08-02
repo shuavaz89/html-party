@@ -84,6 +84,7 @@ var initSetup = function () {
     const partyTimeContainer = document.createElement("div");
     partyTimeContainer.id = "party-time-container";
     partyTimeContainer.classList = "party-time-controls";
+    partyTimeContainer.style['z-index'] = '99999';
     partyTimeContainer.style['color'] = 'white';
     partyTimeContainer.style['position'] = 'fixed';
     partyTimeContainer.style['top'] = '16px';
