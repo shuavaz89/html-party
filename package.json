@@ -2,14 +2,21 @@
   "name": "music-with-style",
   "version": "1.0.0",
   "description": "Add music with CSS styling to your webpage.",
-  "main": "src/musicwithstyle.js",
+  "main": "musicwithstyle.js",
   "scripts": {
     "start": "http-serve ./ -a localhost -p 8000 -c-1",
+    "build": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Joshua Vazquez",
   "license": "ISC",
   "dependencies": {
     "http-serve": "^1.0.1"
+  },
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-cli": "^3.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.2"
   }
 }
