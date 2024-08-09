@@ -4,7 +4,7 @@
   "description": "Add music with CSS styling to your webpage.",
   "main": "dist/musicwithstyle.js",
   "scripts": {
-    "start": "http-serve ./demo -a localhost -p 8000 -c-1",
+    "start": "http-serve ./docs -a localhost -p 8000 -c-1",
     "build": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
