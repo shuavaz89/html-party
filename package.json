@@ -2,9 +2,9 @@
   "name": "music-with-style",
   "version": "1.0.0",
   "description": "Add music with CSS styling to your webpage.",
-  "main": "musicwithstyle.js",
+  "main": "dist/musicwithstyle.js",
   "scripts": {
-    "start": "http-serve ./ -a localhost -p 8000 -c-1",
+    "start": "http-serve ./demo -a localhost -p 8000 -c-1",
     "build": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
