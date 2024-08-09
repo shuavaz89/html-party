@@ -11,7 +11,7 @@ function compileScript(dest) {
 
 function compile(done) {
     compileScript('./dist/');
-    compileScript('./demo/');
+    compileScript('./docs/');
     done();
 }
   
