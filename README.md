@@ -2,9 +2,9 @@
 
 Tired of your old boring web page? Why not add some music with styling!
 
-[DEMO](https://shuavaz89.github.io/music-with-style/){:target="_blank" rel="noopener"}
+[DEMO](https://shuavaz89.github.io/music-with-style/)
 
-[Watch the Video](https://www.youtube.com/watch?v=L_qJz20Fwyo){:target="_blank" rel="noopener"}
+[Watch the Video](https://www.youtube.com/watch?v=L_qJz20Fwyo)
 
 ## How it works
 
