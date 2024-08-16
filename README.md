@@ -2,9 +2,9 @@
 
 Tired of your old boring web page? Why not add some music with styling!
 
-[DEMO](https://shuavaz89.github.io/music-with-style/)
+<a hreg="https://shuavaz89.github.io/music-with-style/">DEMO</a>
 
-[Watch the Video](https://www.youtube.com/watch?v=L_qJz20F)
+<a target="_blank" href="https://www.youtube.com/watch?v=L_qJz20Fwyo">Watch the Video</a>
 
 ## How it works
 
@@ -19,6 +19,10 @@ Simply place the provided special class names to targetted elements and watch th
 The following will apply a text glow and will change the glow color when the audio frequency changes.
 
 `<p class="party-time-textShadow">Visual Text</p>`
+
+## Auto Party
+
+Don't want to add classes? No worries! Enable Auto Party, and automatically your web page will come to life!
 
 ## Class Options
 
